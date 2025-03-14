@@ -5,10 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="565b9662-15d1-4f44-8722-b10bd4659cf5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/datas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/banner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/portfolio.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/banner1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/banners/banner1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/banner2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/banners/banner2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/banner3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/banners/banner3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/portfolio1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/portfolio2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/portfolio3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/portfolio4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/portfolio5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/portfolio6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/portfolio7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/portfolio/portfolio8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kontakt.html" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qna.html" beforeDir="false" afterPath="$PROJECT_DIR$/qna.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/css/accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/css/banner.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/css/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/css/portfolio.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/css/slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/banner3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/portfolio1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/portfolio2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/portfolio3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/portfolio4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/portfolio5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/portfolio6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/portfolio7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/img/portfolio8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/js/accordion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/js/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/js/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/kontakt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/portfolio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/qna.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sablona/thankyou.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/thankyou.html" beforeDir="false" afterPath="$PROJECT_DIR$/thankyou.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +63,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,7 +87,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/pridanie-pozdravu",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -44,6 +96,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sablona" />
+      <recent name="C:\xampp\htdocs\sablona\parts" />
+      <recent name="C:\xampp\htdocs\sablona\img" />
+      <recent name="C:\xampp\htdocs\sablona\img\banners" />
+      <recent name="C:\xampp\htdocs\sablona\sablona" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -62,6 +123,7 @@
       <updated>1741360700067</updated>
       <workItem from="1741360701593" duration="221000" />
       <workItem from="1741360977577" duration="360000" />
+      <workItem from="1741969415596" duration="6804000" />
     </task>
     <servers />
   </component>
