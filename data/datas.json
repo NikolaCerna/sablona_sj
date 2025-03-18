@@ -1,8 +1,17 @@
 {
     "banner_text": {
-    "banner1.jpg": "Prvý nadpis",
-    "banner2.jpg": "Druhý nadpis",
-    "banner3.jpg": "Tretí nadpis"
+        "banner1.jpg" : {
+            "nadpis": "Prvý nadpis",
+            "url" : "https://www.ukf.sk/"
+        },
+        "banner2.jpg" : {
+            "nadpis": "Druhý nadpis",
+            "url" : "http://localhost/sablona/img/banners/banner2.jpg"
+        },
+        "banner3.jpg" : {
+            "nadpis": "Tretí nadpis",
+            "url" : "http://localhost/sablona/img/banners/banner3.jpg"
+        }
     }
 }
 
