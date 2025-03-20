@@ -13,15 +13,49 @@
             "url" : "http://localhost/sablona/img/banners/banner3.jpg"
         }
     },
-    "portfolio_text":{
-        "1": "Môj prvý web",
-        "2": "Dizajnové štúdio",
-        "3": "Online obchod",
-        "4": "Portfolio fotografa",
-        "5": "Blog o cestovaní",
-        "6": "Firemná prezentácia",
-        "7": "E-learning platforma",
-        "8": "Rezervačný systém"
+
+    "portfolio": {
+        "1": {
+            "title": "Môj prvý web",
+            "url": "https://www.ukf.sk/"
+
+        },
+        "2": {
+            "title": "Dizajnové štúdio",
+            "url": "https://www.ukf.sk/"
+
+        },
+        "3": {
+            "title": "Online obchod",
+            "url": "https://www.ukf.sk/"
+
+        },
+        "4": {
+            "title": "Portfolio fotografa",
+            "url": "https://www.ukf.sk/"
+
+        },
+        "5": {
+            "title": "Blog o cestovaní",
+            "url": "https://www.ukf.sk/"
+
+        },
+        "6": {
+            "title": "Firemná prezentácia",
+            "url": "https://www.ukf.sk/"
+
+        },
+        "7": {
+            "title": "E-learning platforma",
+            "url": "https://www.ukf.sk/"
+
+        },
+        "8": {
+            "title": "Rezervačný systém",
+            "url": "https://www.ukf.sk/"
+
+        }
     }
+
 }
 

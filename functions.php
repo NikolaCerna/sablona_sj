@@ -34,22 +34,28 @@ function preparePortfolio(int $numberOfRows = 2, int $numberOfCols = 4): array{
     return $portfolio;
 }
 ?>
-
 <?php
 function finishPortfolio() {
-    $json = file_get_contents("data/datas.json"); // Načíta JSON súbor
+    $json = file_get_contents("data/datas.json");
     $data = json_decode($json, true);
 
     $portfolio = preparePortfolio();
     foreach ($portfolio as $row) {
         echo '<div class="row">';
         foreach ($row as $index) {
-            $title = $data["portfolio_text"][$index];
-            echo '<div class="col-25 portfolio text-white text-center" id="portfolio-' . $index . '">' . $title . '</div>';
+            $title = $data["portfolio"][$index]["title"];
+            $url = $data["portfolio"][$index]["url"];
+
+            echo '<div class="col-25">';
+            echo '<a href="' . $url . '" target="_blank" style="display: block; height: 100%; text-decoration: none;">';
+            echo '<div class="portfolio text-white text-center" id="portfolio-' . $index . '">';
+            echo $title;
+            echo '</div>';
+            echo '</a>';
+            echo '</div>';
         }
         echo '</div>';
     }
 }
 ?>
-
 
