@@ -1,17 +1,27 @@
 {
     "banner_text": {
         "banner1.jpg" : {
-            "nadpis": "Prvý nadpis",
+            "nadpis": "Vitajte!",
             "url" : "https://www.ukf.sk/"
         },
         "banner2.jpg" : {
-            "nadpis": "Druhý nadpis",
+            "nadpis": "rôzne informácie",
             "url" : "http://localhost/sablona/img/banners/banner2.jpg"
         },
         "banner3.jpg" : {
-            "nadpis": "Tretí nadpis",
+            "nadpis": "aktuality",
             "url" : "http://localhost/sablona/img/banners/banner3.jpg"
         }
+    },
+    "portfolio_text":{
+        "1": "Môj prvý web",
+        "2": "Dizajnové štúdio",
+        "3": "Online obchod",
+        "4": "Portfolio fotografa",
+        "5": "Blog o cestovaní",
+        "6": "Firemná prezentácia",
+        "7": "E-learning platforma",
+        "8": "Rezervačný systém"
     }
 }
 
