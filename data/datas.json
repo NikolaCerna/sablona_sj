@@ -2,56 +2,56 @@
     "banner_text": {
         "banner1.jpg" : {
             "nadpis": "Vitajte!",
-            "url" : "https://www.ukf.sk/"
+            "url": "https://www.ukf.sk/"
         },
         "banner2.jpg" : {
             "nadpis": "rôzne informácie",
-            "url" : "http://localhost/sablona/img/banners/banner2.jpg"
+            "url": "http://localhost/sablona/img/banners/banner2.jpg"
         },
         "banner3.jpg" : {
             "nadpis": "aktuality",
-            "url" : "http://localhost/sablona/img/banners/banner3.jpg"
+            "url": "http://localhost/sablona/img/banners/banner3.jpg"
         }
     },
 
     "portfolio": {
-        "1": {
-            "title": "Môj prvý web",
+        "portfolio1.jpg": {
+            "nadpis": "Môj prvý web",
             "url": "https://www.ukf.sk/"
 
         },
-        "2": {
-            "title": "Dizajnové štúdio",
+        "portfolio2.jpg": {
+            "nadpis": "Dizajnové štúdio",
             "url": "https://www.ukf.sk/"
 
         },
-        "3": {
-            "title": "Online obchod",
+        "portfolio3.jpg": {
+            "nadpis": "Online obchod",
             "url": "https://www.ukf.sk/"
 
         },
-        "4": {
-            "title": "Portfolio fotografa",
+        "portfolio4.jpg": {
+            "nadpis": "Portfolio fotografa",
             "url": "https://www.ukf.sk/"
 
         },
-        "5": {
-            "title": "Blog o cestovaní",
+        "portfolio5.jpg": {
+            "nadpis": "Blog o cestovaní",
             "url": "https://www.ukf.sk/"
 
         },
-        "6": {
-            "title": "Firemná prezentácia",
+        "portfolio6.jpg": {
+            "nadpis": "Firemná prezentácia",
             "url": "https://www.ukf.sk/"
 
         },
-        "7": {
-            "title": "E-learning platforma",
+        "portfolio7.jpg": {
+            "nadpis": "E-learning platforma",
             "url": "https://www.ukf.sk/"
 
         },
-        "8": {
-            "title": "Rezervačný systém",
+        "portfolio8.jpg": {
+            "nadpis": "Rezervačný systém",
             "url": "https://www.ukf.sk/"
 
         }
