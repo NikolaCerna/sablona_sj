@@ -20,7 +20,7 @@
                 <li><a href="index.php">Domov</a></li>
                 <li><a href="portfolio.php">Portfólio</a></li>
                 <li><a href="qna.html">Q&A</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="kontakt.php">Kontakt</a></li>
             </ul>
             <a class="hamburger" id="hamburger">
                 <i class="fa fa-bars"></i>
