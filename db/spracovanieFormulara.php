@@ -20,12 +20,12 @@ try {
 ?>
 <?php
 // Získanie údajov z formulára
-$meno = $_POST["meno"];
-$email = $_POST["email"];
-$sprava = $_POST["sprava"];
+$meno = $_GET["meno"];
+$email = $_GET["email"];
+$sprava = $_GET["sprava"];
 // SQL príkaz INSERT
 $sql = "INSERT INTO udaje (meno, email, sprava) 
-    VALUES ('".$meno."', '".$email."', '".$sprava."')";
+    VALUE ('".$meno."', '".$email."', '".$sprava."')";
 $statement = $conn->prepare($sql);
 try {
     $insert = $statement->execute();
