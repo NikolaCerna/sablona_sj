@@ -52,7 +52,7 @@
         </div>
         <div class="col-50 text-right">
           <h3>Napíšte nám</h3>
-            <form id="contact" method="get" action="db/spracovanieFormulara.php">
+            <form id="contact" method="post" action="db/spracovanieFormulara.php">
                 <input type="text" placeholder="Vaše meno" name="meno" id ="meno"  required><br>
                 <input type="email" placeholder="Váš email" name="email" id="email" required><br>
                 <textarea placeholder="Vaša správa" name="sprava" id="sprava"></textarea><br>
