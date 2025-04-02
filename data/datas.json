@@ -1,4 +1,16 @@
 {
+
+    "otazky": [
+        "Čo je PHP?",
+        "Ako funguje MySQL?",
+        "Čo je OOP?"
+    ],
+    "odpovede": [
+        "PHP je skriptovací jazyk pre vývoj webových aplikácií.",
+        "MySQL je relačná databáza, ktorá uchováva dáta v tabuľkách.",
+        "OOP znamená objektovo orientované programovanie."
+    ],
+
     "banner_text": {
         "banner1.jpg" : {
             "nadpis": "Vitajte!",

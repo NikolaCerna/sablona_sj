@@ -1,49 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moja stránka</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accordion.css">
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header class="container main-header">
-        <div>
-          <a href="index.php">
-            <img src="img/logo.png" height="40">
-          </a>
-        </div>
-      <nav class="main-nav">
-        <ul class="main-menu" id="main-menu">
-            <li><a href="index.php">Domov</a></li>
-            <li><a href="portfolio.php">Portfólio</a></li>
-            <li><a href="qna.php">Q&A</a></li>
-            <li><a href="kontakt.php">Kontakt</a></li>
-        </ul>
-        <a class="hamburger" id="hamburger">
-            <i class="fa fa-bars"></i>
-        </a>
-      </nav>
-    </header>
-    <main>
+  <header class="container main-header">
+  <div class="logo-holder">
+    <a href="index.php"><img src="img/logo.png" height="40 "></a>
+  </div>
+  <nav class="main-nav">
+    <ul class="main-menu" id="main-menu container">
+      <li><a href="index.php">Domov</a></li>
+      <li><a href="portfolio.php">Portfólio</a></li>
+      <li><a href="qna.html">Q&A</a></li>
+      <li><a href="kontakt.php">Kontakt</a></li>
+    </ul>
+    <a class="hamburger" id="hamburger">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+</header>
+  <main>
       <section class="banner">
-        <div class="container text-white">
-          <h1>Ďakujeme</h1>
-        </div>
+          <div class="container text-white">
+              <h1>Q&A</h1>
+          </div>
       </section>
       <section class="container">
-        <div class="row">
-          <div class="col-100 text-center">
-              <h2>Ďakujeme za vyplnenie formulára</h2>
+          <div class="row">
+              <div class="col-100 text-center">
+                  <p><strong><em>Elit culpa id mollit irure sit. Ex ut et ea esse culpa officia ea incididunt elit velit veniam qui. Mollit deserunt culpa incididunt laborum commodo in culpa.</em></strong></p>
+              </div>
           </div>
-        </div>
       </section>
+      <?php
+      include_once "classes/QnA.php";
+      use otazkyodpovede\QnA;
 
+      $qna = new QnA();
+      //$qna->insertQnA();
+      $qnas = $qna->getQnA(); // Načítanie otázok a odpovedí z databázy
 
-    </main>
-    
+      echo '<section class="container">';
+      foreach ($qnas as $q) {
+          echo '<div class="accordion">';
+          echo '<div class="question">' . ($q['otazka']) . '</div>';
+          echo '<div class="answer">' . ($q['odpoved']) . '</div>';
+          echo '</div>';
+      }
+      echo '</section>';
+
+      ?>
+  </main>
   <footer class="container bg-dark text-white">
     <div class="row">
       <div class="col-25">
@@ -72,6 +87,7 @@
       Created and designed by Lívia
     </div>
   </footer>
-    <script src="js/menu.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>
