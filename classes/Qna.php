@@ -25,42 +25,54 @@ class QnA{
         }
     }
 
-    public function insertQnA(){
+    public function insertQnA() {
         try {
             // Načítanie JSON súboru
-            $data = json_decode(file_get_contents
-            (__ROOT__.'/data/datas.json'), true);
+            $data = json_decode(file_get_contents(__ROOT__.'/data/datas.json'), true);
             $otazky = $data["otazky"];
             $odpovede = $data["odpovede"];
 
             // Vloženie otázok a odpovedí v rámci transakcie
             $this->conn->beginTransaction();
 
-            $sql = "INSERT INTO qna (otazka, odpoved) VALUES (:otazka, :odpoved)";
+            $sql = "SELECT COUNT(*) FROM qna WHERE otazka = :otazka"; // zisti, ci otazka existuje cize 1/0
             $statement = $this->conn->prepare($sql);
 
+            $insertSql = "INSERT INTO qna (otazka, odpoved) VALUES (:otazka, :odpoved)";
+            $insertStatement = $this->conn->prepare($insertSql);
+
             for ($i = 0; $i < count($otazky); $i++) {
+                // skontroluje, ci otatka v databaze uz existuje alebo nie
                 $statement->bindParam(':otazka', $otazky[$i]);
-                $statement->bindParam(':odpoved', $odpovede[$i]);
                 $statement->execute();
+                $count = $statement->fetchColumn();
+
+                // ak neexistuje ju vložíme
+                if ($count == 0) {
+                    $insertStatement->bindParam(':otazka', $otazky[$i]);
+                    $insertStatement->bindParam(':odpoved', $odpovede[$i]);
+                    $insertStatement->execute();
+                }
             }
+
             $this->conn->commit();
-            echo "Dáta boli vložené";
+            // echo "Dáta boli vložené";
         } catch (Exception $e) {
             // Zobrazenie chybového hlásenia
             echo "Chyba pri vkladaní dát do databázy: " . $e->getMessage();
             $this->conn->rollback(); // Vrátenie späť zmien v prípade chyby
-        } finally {
+        } // finally {
             // Uzatvorenie spojenia
-            $this->conn = null;
-        }
+        // $this->conn = null;
+        // }
     }
-    public function getQnA() {
+
+    public function getQnA() { //metoda na ziskanie otazoka  dopovedi z databzy
         try {
-            $sql = "SELECT otazka, odpoved FROM qna";
-            $statement = $this->conn->prepare($sql);
-            $statement->execute();
-            return $statement->fetchAll();
+            $insertSql = "SELECT otazka, odpoved FROM qna";// tahame otazky a odpovede z databazy
+            $insertStatementt = $this->conn->prepare($insertSql);
+            $insertStatementt->execute();
+            return  $insertStatementt->fetchAll();//vyberieme VSETKY (je to pole otazok a odpovedi)
         } catch (Exception $e) {
             echo "Chyba pri načítaní údajov: " . $e->getMessage();
             return [];

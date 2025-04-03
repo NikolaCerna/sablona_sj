@@ -1,17 +1,39 @@
 {
 
+
     "otazky": [
         "Čo je PHP?",
         "Ako funguje MySQL?",
-        "Čo je OOP?"
+        "Čo je OOP?",
+        "Aký je rozdiel medzi GET a POST v HTTP?",
+        "Čo je to JavaScript?",
+        "Čo je to REST API?",
+        "Aký je rozdiel medzi serverom a klientom?",
+        "Čo znamená MVC v programovaní?",
+        "Aké sú výhody použitia CSS Grid?",
+        "Čo je AJAX?",
+        "Čo je PHP?", 
+        "Čo je to JavaScript?", 
+        "Aký je rozdiel medzi serverom a klientom?" 
     ],
     "odpovede": [
         "PHP je skriptovací jazyk pre vývoj webových aplikácií.",
         "MySQL je relačná databáza, ktorá uchováva dáta v tabuľkách.",
-        "OOP znamená objektovo orientované programovanie."
+        "OOP znamená objektovo orientované programovanie.",
+        "Rozdiel medzi GET a POST je v tom, že GET odosiela dáta v URL, zatiaľ čo POST ich odosiela v tele požiadavky.",
+        "JavaScript je skriptovací jazyk používaný na vytváranie dynamických webových stránok.",
+        "REST API je architektonický štýl pre vytváranie webových služieb, ktoré komunikujú cez HTTP.",
+        "Server je zariadenie, ktoré poskytuje služby klientovi, zatiaľ čo klient je zariadenie, ktoré tieto služby požaduje.",
+        "MVC (Model-View-Controller) je architektonický vzor, ktorý delí aplikáciu na tri časti: model (dáta), view (zobrazenie) a controller (riadiaca logika).",
+        "CSS Grid je nástroj na vytváranie flexibilných a responzívnych rozložení webových stránok.",
+        "AJAX (Asynchronous JavaScript and XML) je technológia, ktorá umožňuje načítanie dát na pozadí bez obnovenia stránky.",
+        "PHP je skriptovací jazyk pre vývoj webových aplikácií.", 
+        "JavaScript je skriptovací jazyk používaný na vytváranie dynamických webových stránok.", 
+        "Server je zariadenie, ktoré poskytuje služby klientovi, zatiaľ čo klient je zariadenie, ktoré tieto služby požaduje." 
     ],
 
-    "banner_text": {
+
+"banner_text": {
         "banner1.jpg" : {
             "nadpis": "Vitajte!",
             "url": "https://www.ukf.sk/"

@@ -45,11 +45,11 @@
       use otazkyodpovede\QnA;
 
       $qna = new QnA();
-      //$qna->insertQnA();
-      $qnas = $qna->getQnA(); // Načítanie otázok a odpovedí z databázy
+      $qna->insertQnA(); //nemusime odkomentovat lebo sme odkomentovali vypis otazky boli vlozene, zatvorenie suboru a upravili metodu aby neduplikovala otazky
+      $qnas = $qna->getQnA(); // načítame otazky a odp z databazy
 
       echo '<section class="container">';
-      foreach ($qnas as $q) {
+      foreach ($qnas as $q) { //prechadzame opole otazok a odpovedi
           echo '<div class="accordion">';
           echo '<div class="question">' . ($q['otazka']) . '</div>';
           echo '<div class="answer">' . ($q['odpoved']) . '</div>';
