@@ -1,53 +1,39 @@
 <?php
 namespace otazkyodpovede;
+error_reporting(E_ALL);
+ini_set('display_errors', "On");
 
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'/db/config.php');
-use PDO;
-class QnA{
-    private $conn;
+define('__ROOT__', dirname(dirname(__FILE__))); // presuň sem, ak nie je ešte pred require
+require_once(__ROOT__.'/classes/Database.php');
+use Database;
+
+class QnA extends Database {
+    protected $connection;
+
     public function __construct() {
         $this->connect();
-    }
-    private function connect() {
-        $config = DATABASE;
-
-        $options = array(
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        );
-        try {
-            $this->conn = new PDO('mysql:host=' . $config['HOST'] . ';dbname=' .
-                $config['DBNAME'] . ';port=' . $config['PORT'], $config['USER_NAME'],
-                $config['PASSWORD'], $options);
-        } catch (PDOException $e) {
-            die("Chyba pripojenia: " . $e->getMessage());
-        }
+        $this->connection = $this->getConnection();
     }
 
     public function insertQnA() {
         try {
-            // Načítanie JSON súboru
             $data = json_decode(file_get_contents(__ROOT__.'/data/datas.json'), true);
             $otazky = $data["otazky"];
             $odpovede = $data["odpovede"];
 
-            // Vloženie otázok a odpovedí v rámci transakcie
-            $this->conn->beginTransaction();
+            $this->connection->beginTransaction(); // oprava preklepu: connnection -> connection
 
-            $sql = "SELECT COUNT(*) FROM qna WHERE otazka = :otazka"; // zisti, ci otazka existuje cize 1/0
-            $statement = $this->conn->prepare($sql);
+            $sql = "SELECT COUNT(*) FROM qna WHERE otazka = :otazka";
+            $statement = $this->connection->prepare($sql);
 
             $insertSql = "INSERT INTO qna (otazka, odpoved) VALUES (:otazka, :odpoved)";
-            $insertStatement = $this->conn->prepare($insertSql);
+            $insertStatement = $this->connection->prepare($insertSql);
 
             for ($i = 0; $i < count($otazky); $i++) {
-                // skontroluje, ci otatka v databaze uz existuje alebo nie
                 $statement->bindParam(':otazka', $otazky[$i]);
                 $statement->execute();
                 $count = $statement->fetchColumn();
 
-                // ak neexistuje ju vložíme
                 if ($count == 0) {
                     $insertStatement->bindParam(':otazka', $otazky[$i]);
                     $insertStatement->bindParam(':odpoved', $odpovede[$i]);
@@ -55,25 +41,24 @@ class QnA{
                 }
             }
 
-            $this->conn->commit();
-            // echo "Dáta boli vložené";
+            $this->connection->commit();
+            http_response_code(200);
         } catch (Exception $e) {
-            // Zobrazenie chybového hlásenia
             echo "Chyba pri vkladaní dát do databázy: " . $e->getMessage();
-            $this->conn->rollback(); // Vrátenie späť zmien v prípade chyby
-        } // finally {
-            // Uzatvorenie spojenia
-        // $this->conn = null;
-        // }
+            http_response_code(500);
+            $this->connection->rollback();
+        }
     }
 
-    public function getQnA() { //metoda na ziskanie otazoka  dopovedi z databzy
+    public function getQnA() {
         try {
-            $insertSql = "SELECT otazka, odpoved FROM qna";// tahame otazky a odpovede z databazy
-            $insertStatementt = $this->conn->prepare($insertSql);
-            $insertStatementt->execute();
-            return  $insertStatementt->fetchAll();//vyberieme VSETKY (je to pole otazok a odpovedi)
+            $sql = "SELECT otazka, odpoved FROM qna";
+            $statement = $this->connection->prepare($sql);
+            $statement->execute();
+            http_response_code(200);
+            return $statement->fetchAll();
         } catch (Exception $e) {
+            http_response_code(500);
             echo "Chyba pri načítaní údajov: " . $e->getMessage();
             return [];
         }
